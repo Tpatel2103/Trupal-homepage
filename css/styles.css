@@ -732,50 +732,44 @@ img {
   color: var(--ink-soft);
 }
 
-/* ---------- About page figures & galleries ---------- */
-.about-figure {
-  margin: var(--space-md) 0 var(--space-lg);
+/* ---------- About page side icons (small, right-floated) ---------- */
+.about-side {
+  float: right;
+  width: clamp(96px, 20vw, 140px);
+  height: auto;
+  margin: 0.2rem 0 var(--space-sm) var(--space-md);
   border: var(--border);
   border-radius: var(--radius);
-  overflow: hidden;
   background-color: var(--panel);
 }
 
-.about-figure img {
+.about-side-group {
+  float: right;
+  width: clamp(96px, 20vw, 140px);
+  margin: 0.2rem 0 var(--space-sm) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.about-side-group img {
   display: block;
   width: 100%;
   height: auto;
-}
-
-.about-figure figcaption {
-  padding: var(--space-xs) var(--space-md);
-  border-top: var(--hair);
-  font-family: var(--font-mono);
-  font-size: var(--step--1);
-  color: var(--ink-soft);
-}
-
-.about-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--space-md);
-  margin: var(--space-md) 0 var(--space-lg);
-}
-
-.about-gallery img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
   border: var(--border);
   border-radius: var(--radius);
   background-color: var(--panel);
 }
 
-.about-logo {
-  display: block;
-  max-width: 220px;
-  margin: var(--space-md) 0 var(--space-lg);
-  border: var(--border);
-  border-radius: var(--radius);
+/* keep each section below the floated icons of the previous one */
+.prose h2,
+.prose .prose-end {
+  clear: both;
+}
+
+@media (max-width: 480px) {
+  .about-side,
+  .about-side-group {
+    width: 84px;
+  }
 }
