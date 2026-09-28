@@ -32,8 +32,9 @@ Canvas: https://northeastern.instructure.com/courses/261032
 
 - Deployed URL (GitHub Pages): https://tpatel2103.github.io/Trupal-homepage/
 - Repository: https://github.com/Tpatel2103/Trupal-homepage
-- Presentation (Google Slides): _to be added_
-- Video Demonstration: _to be added_
+- Presentation (Google Slides): https://docs.google.com/presentation/d/1S1r3HNB2d3hpzq-YKoVcvgZZ0jbg77ZnL5meYdoiAHE/edit?usp=sharing
+- Video Demonstration (demo): https://youtu.be/rvx1wqeW_HM
+- Presentation Video: https://youtu.be/_CxeLPy4wy8
 - Design Document: [View Design Document](./docs/Trupal_Patel_Design_Document.pdf)
 
 ## Screenshots
@@ -49,6 +50,14 @@ Canvas: https://northeastern.instructure.com/courses/261032
 **Home — Education & Focus sections**
 
 ![Education and focus sections in card layout](./images/screenshot-sections.png)
+
+**Projects page**
+
+![Projects page showing the object-detection project](./images/screenshot-projects.png)
+
+**About page**
+
+![About page with the career journey and images](./images/screenshot-about.png)
 
 ## Technologies Used
 
@@ -210,7 +219,7 @@ labelled as such.
 - `js/nav.js` — mobile navigation
 - `js/contact.js` — copy-email button
 - `images/` — image and SVG assets
-- `docs/` — design document, presentation, and video script
+- `docs/` — design document, presentation, and demo + presentation scripts
 - `package.json`, `eslint.config.js`, `.prettierrc` — tooling and configuration
 
 ## License
