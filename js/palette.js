@@ -36,6 +36,7 @@ const COMMANDS = [
   { label: "Go to About", hint: "page", keys: "about bio", run: () => (window.location.href = "./about.html") },
   { label: "Go to Blog", hint: "page", keys: "blog writing article", run: () => (window.location.href = "./blog.html") },
   { label: "Jump to Focus areas", hint: "section", keys: "skills focus", run: () => go("focus") },
+  { label: "Jump to Skills", hint: "section", keys: "skills tech stack languages", run: () => go("skills") },
   { label: "Jump to Orbital sandbox", hint: "section", keys: "orbit space satellite sandbox", run: () => go("orbit") },
   { label: "Jump to Courses", hint: "section", keys: "courses classes", run: () => go("courses") },
   { label: "Jump to Hobbies", hint: "section", keys: "hobbies", run: () => go("hobbies") },
