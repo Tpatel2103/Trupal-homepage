@@ -735,7 +735,7 @@ img {
 /* ---------- About page side icons (small, right-floated) ---------- */
 .about-side {
   float: right;
-  width: clamp(170px, 26vw, 260px);
+  width: clamp(240px, 32vw, 360px);
   height: auto;
   margin: 0.2rem 0 var(--space-sm) var(--space-lg);
   border: var(--border);
@@ -745,7 +745,7 @@ img {
 
 .about-side-group {
   float: right;
-  width: clamp(170px, 26vw, 260px);
+  width: clamp(240px, 32vw, 360px);
   margin: 0.2rem 0 var(--space-sm) var(--space-lg);
   display: flex;
   flex-direction: column;
@@ -767,9 +767,24 @@ img {
   clear: both;
 }
 
+/* full-width, justified body text on prose pages (About, Blog) */
+.prose p,
+.prose li {
+  max-width: none;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.prose .prose-end {
+  text-align: left;
+  hyphens: manual;
+}
+
 @media (max-width: 480px) {
   .about-side,
   .about-side-group {
-    width: 130px;
+    width: 150px;
   }
 }
