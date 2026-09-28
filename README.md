@@ -1,183 +1,218 @@
-# Trupal Jageshkumar Patel's Personal Homepage
-
-A personal homepage for a computer-vision & ML engineer, built with
-**vanilla HTML5, CSS3, and ES6 modules** — no frameworks, no component
-libraries, no jQuery. The look is an editorial "plotter's notebook": a warm
-graph-paper canvas, a Bricolage Grotesque / Hanken Grotesk / Space Mono type
-system, and a navy + magenta + cobalt palette. It ships three original,
-hand-written interactive features (a regression playground, an orbital sandbox,
-and a ⌘K command palette).
-
-- **Live site:** https://tpatel2103.github.io/Trupal-homepage/
-- **Repository:** https://github.com/Tpatel2103/Trupal-homepage
-
----
+# Trupal Jageshkumar Patel — Personal Home Page
 
 ## Author
 
-**Trupal Jageshkumar Patel** — MS Computer Science, Northeastern University.
-[Homepage](https://tpatel2103.github.io/Trupal-homepage/) ·
-[GitHub](https://github.com/Tpatel2103) ·
-[LinkedIn](https://www.linkedin.com/in/trupal-patel-08a959268) ·
-Patel.trupa@northeastern.edu
+Trupal Jageshkumar Patel
 
-## Class link
+## Project Description
 
-CS5610 Web Development, Northeastern University —
-https://northeastern.instructure.com/courses/261032
+This project is a personal portfolio website for Trupal Jageshkumar Patel. The
+site presents my background, education, skills, projects, and research in a
+clean, multi-page, static front-end format. It is styled as an editorial
+"plotter's notebook" and doubles as a live portfolio for my co-op and internship
+search in computer vision and machine learning.
 
-## Video demonstration
+## Project Objective
 
-_TODO — paste the link to your ~3-minute narrated demo video (must be public)._
-A ready-to-read script is in [`docs/Trupal_Patel_Video_Script.md`](./docs/Trupal_Patel_Video_Script.md).
+The goal of this assignment was to build a personal homepage using vanilla
+HTML5, CSS3, and ES6+ — no backend and no component libraries — that introduces
+who I am, shows my education, experience, and work, and gives visitors a way to
+reach me, while meeting the course's technical requirements: semantic structure,
+responsive layout, organised CSS without `!important`, linting and formatting,
+original JavaScript features, and a public deployment.
 
-## Project objective
+## Course
 
-Build a static, front-end-only homepage that introduces me and my work,
-demonstrates clean semantic HTML, organised CSS without `!important`, and
-original JavaScript delivered as ES6 modules. The page is accessible, W3C-valid,
-and deployed as a public static site.
+CS5610 Web Development — Northeastern University
+Instructor: John Alexis Guerra Gomez
+Course link: https://johnguerra.co/classes/webDevelopment_online_fall_2026/
+Canvas: https://northeastern.instructure.com/courses/261032
 
-## Screenshot
+## Submission URLs
 
-![Screenshot of the homepage with the interactive regression playground](./images/screenshot.png)
+- Deployed URL (GitHub Pages): https://tpatel2103.github.io/Trupal-homepage/
+- Repository: https://github.com/Tpatel2103/Trupal-homepage
+- Presentation (Google Slides): _to be added_
+- Video Demonstration: _to be added_
+- Design Document: [View Design Document](./docs/Trupal_Patel_Design_Document.pdf)
 
-> **TODO:** replace with a screenshot of the *deployed* page (an animated **GIF**
-> is preferred — capture clicking the plot and the line refitting). Save it as
-> `images/screenshot.png`; it will appear above.
+## Screenshots
 
----
+**Home — hero with the interactive regression plot**
 
-## Deliverables
+![Homepage hero with the interactive regression plot](./images/screenshot.png)
 
-| Item | Where |
-| --- | --- |
-| Live site | https://tpatel2103.github.io/Trupal-homepage/ |
-| Source code | this repository |
-| Design document | [`docs/Trupal_Patel_Design_Document.pdf`](./docs/Trupal_Patel_Design_Document.pdf) · source: [`DESIGN.md`](./DESIGN.md) |
-| Presentation | [`docs/Trupal_Patel_Presentation.pptx`](./docs/Trupal_Patel_Presentation.pptx) (import into Google Slides, make public) |
-| Video script | [`docs/Trupal_Patel_Video_Script.md`](./docs/Trupal_Patel_Video_Script.md) |
-| Video demo | _add public link above_ |
-| Code review | GitHub Pull Request with assigned reviewer |
+**Home — orbital sandbox**
 
----
+![Orbital sandbox, a two-body gravity simulator](./images/screenshot-orbit.png)
 
-## Project structure
+**Home — Education & Focus sections**
 
-```
-.
-├── index.html          # Home page
-├── projects.html       # Projects page (2nd URL)
-├── about.html          # About — my career journey (written by me)
-├── blog.html           # Short article (the AI-generated page)
-├── css/
-│   └── styles.css      # All styles: tokens, layout, components (no !important)
-├── js/
-│   ├── main.js         # ES6 entry module (type="module")
-│   ├── regression.js   # Original component #1 (interactive least-squares plot)
-│   ├── orbit.js        # Original component #2 (space gravity sandbox)
-│   ├── palette.js      # Original component #3 (⌘K command palette)
-│   ├── theme.js        # Light/dark theme toggle + persistence
-│   ├── nav.js          # Accessible mobile navigation
-│   └── contact.js      # Copy-email-to-clipboard
-├── images/             # SVG assets + project/about images
-├── docs/               # Design document, presentation, video script
-├── package.json        # "type": "module", scripts, dev dependencies
-├── eslint.config.js    # Class ESLint config (runs Prettier via ESLint)
-├── .prettierrc         # Prettier formatting config
-├── LICENSE             # MIT
-├── DESIGN.md           # Design document (source)
-└── README.md
-```
+![Education and focus sections in card layout](./images/screenshot-sections.png)
 
-## Instructions to build & run
+## Technologies Used
 
-No build step is required — it is a static site. To preview locally you need a
-static server (ES modules must be served over HTTP, not opened via `file://`).
+- HTML5
+- CSS3 (Grid & Flexbox — no Bootstrap or other component libraries)
+- Vanilla JavaScript (ES6 modules)
+- Canvas API (for the interactive visuals)
+- Google Fonts (Bricolage Grotesque, Hanken Grotesk, Space Mono)
+- ESLint (class configuration)
+- Prettier
+- Git & GitHub
+- GitHub Pages
+
+## Pages Included
+
+**Home (index.html)**
+A full hero with my name, a monospace kicker, and the headline "I build vision
+systems, from satellites to the edge," alongside an interactive least-squares
+regression playground. Below it are the orbital sandbox and the About, Education,
+Skills, Courses, Projects, Research, Hobbies, and Contact sections.
+
+**Projects (projects.html)**
+An editorial list of the systems I have built end to end — real-time object
+detection on Jetson Nano, IoT waste-bin monitoring, satellite image processing at
+ISRO, hyperspectral leaf-pathogen detection, and a full-stack blood-bank
+application — each with a cover, a short write-up, tags, and links to
+publications where relevant.
+
+**About (about.html)**
+My career journey in first person, from Computer Engineering at CHARUSAT and
+research in computer vision and IoT, to my internship at ISRO's Space
+Applications Centre and my MS in Computer Science at Northeastern, with images
+from each stage.
+
+**Blog (blog.html)**
+A short article, "Getting computer vision onto the edge." This is the
+AI-generated page required by the assignment.
+
+## Creative Addition
+
+The site includes three original interactive features, all written in vanilla
+ES6 with no libraries:
+
+- **Regression playground** (hero) — click the plot to add data points and a
+  least-squares line refits in real time, with a live equation and R².
+- **Orbital sandbox** — a two-body gravity simulator; drag to launch a satellite
+  and watch it orbit, escape, or fall back. My nod to space and my
+  satellite-imaging work at ISRO.
+- **Command palette** — press ⌘K (or Ctrl-K) on any page to navigate and run
+  actions from the keyboard.
+
+## Instructions to Build & Run
+
+### Prerequisites
+
+- Node.js
+- npm
+- A modern web browser
+
+This is a static front-end website. Node.js and npm are only used for the dev
+tools (ESLint and Prettier). Because it uses ES6 modules, it must be served over
+HTTP rather than opened via `file://`.
+
+### 1. Clone the repository
 
 ```bash
-npm install          # dev tooling: eslint, prettier, serve
-npm start            # serve locally at http://localhost:3000
-npm run lint         # lint the JavaScript
-npm run format       # apply Prettier
+git clone https://github.com/Tpatel2103/Trupal-homepage.git
+cd Trupal-homepage
 ```
 
-Any static server works — e.g. `python3 -m http.server` — as long as the page is
-served over HTTP.
+### 2. Install dependencies
 
-### Deploying (GitHub Pages)
+```bash
+npm install
+```
 
-Push to the repo, then **Settings → Pages → Deploy from a branch → `main` →
-`/(root)`**. The live URL appears at the top of that page.
+Installs the dev dependencies listed in `package.json` (ESLint, Prettier, and a
+static server).
 
----
+### 3. Run the website locally
 
-## Original components
+```bash
+npm start
+```
 
-Three original, hand-written vanilla-JS features (no libraries):
+Serves the site at http://localhost:3000. Any static server works — for example
+the VS Code Live Server extension, or `python3 -m http.server`.
 
-**1. Regression playground** (`js/regression.js`) — the hero. Click/tap the plot
-to add data points; a **least-squares line** refits in real time with a live
-equation, R², and point count.
+### 4. Lint and format
 
-**2. Orbital sandbox** (`js/orbit.js`) — a space-themed two-body **gravity
-simulator**. Drag to launch a satellite (the drag vector sets its velocity) or
-tap for a circular orbit; satellites feel the planet's gravity, trail over a
-starfield, and are removed when they crash or escape. Real inverse-square
-physics with sub-stepped integration, theme-aware, with a reduced-motion
-fallback.
+```bash
+npm run lint
+npm run format
+```
 
-**3. Command palette** (`js/palette.js`) — press **⌘K / Ctrl-K** (or **/**) to
-open a keyboard-driven menu on every page: navigate, jump to sections, toggle the
-theme, copy the email, and fire commands into the plot and orbit sandbox.
+### 5. View the deployed website
 
-## Accessibility & standards
+https://tpatel2103.github.io/Trupal-homepage/
 
-- Semantic HTML5; real `<button>` elements, never `div`/`span` stand-ins.
-- Every `<img>` has meaningful `alt`; canvases have `role` + `aria-label`; live
-  readouts use `aria-live`.
-- Visible keyboard focus, a skip link, `aria` state on controls, reduced-motion
-  respected.
-- Targets zero errors at <https://validator.w3.org/>.
-- CSS uses classes, Grid + Flexbox, and no `!important`.
+## Image and Resource Attribution
 
----
+- Site logo / favicon (`favicon.svg`) and portrait placeholder (`avatar.svg`):
+  original graphics created for this project.
+- Project cover illustrations (`project-*.svg`): original graphics created for
+  this project.
+- Project images on the About page (object-detection result, waste-bin sensor,
+  and the ISRO Space Applications Centre photo): from my own projects and
+  experience.
+- NVIDIA and Northeastern / Khoury College marks: official third-party and
+  institutional logos, used as small badge icons.
+- AI-themed illustrations (`machine-learning.png`, `ai-chip.png`,
+  `ai-robot-hand.png`): generic stock illustrations, used decoratively.
 
-## Use of generative AI tools
+## Generative AI Usage
 
-| Item | Detail |
-| --- | --- |
-| Tool / model | Claude (Anthropic) |
-| How it was used | Scaffolding the project, drafting the CSS/JS, and writing the article on `blog.html` |
-| The AI-generated page | `blog.html` — the article text was written by the model and reviewed for accuracy |
-| Written by me (not AI) | `index.html`, `projects.html`, `about.html` |
+**ChatGPT (OpenAI) — GPT-5.6 Luna (Instant mode)**
 
-**Example prompt used for the AI page (blog):**
+Used for HTML, CSS, and JavaScript syntax and web-development concepts, and to
+create the Blog page entirely.
 
-> "Write a short, honest blog article for a computer-vision portfolio titled
-> 'Getting computer vision onto the edge'. Cover why edge deployment is hard,
-> techniques like quantisation and pruning, and why latency and model size
-> matter as much as accuracy. Plain, no marketing, a few short sections."
+> "What is the correct syntax to split my vanilla JavaScript into ES6 modules and
+> load them with `type=\"module\"`, and how do `import`/`export` work?"
 
-All AI-generated content was reviewed before inclusion.
+> "Write a short blog article for a computer-vision portfolio titled 'Getting
+> computer vision onto the edge', covering why edge deployment is hard,
+> quantisation and pruning, and why latency and model size matter."
 
----
+**Claude (Anthropic) — Opus-class (2026), via the Claude web app**
 
-## Submission checklist
+Used for syntax help and to explain web-development concepts.
 
-- [x] Deployed public site (GitHub Pages)
-- [x] Source on GitHub with README + MIT license
-- [x] ≥ 2 authored pages + 1 AI page (index, projects, about + blog)
-- [x] Original vanilla-JS features (three of them)
-- [x] Organised css / js / images folders; `type: "module"`
-- [x] Design document (`docs/`)
-- [x] Presentation (`docs/`) — import to Google Slides and make public
-- [ ] Record the ~3-min public video and paste the link above
-- [ ] Replace `images/screenshot.png` with a real screenshot / GIF
-- [ ] Run `npm run format` and `npm run lint`
-- [ ] Validate each page at validator.w3.org
-- [ ] Complete the code-review Pull Request
+> "How do CSS Grid and Flexbox differ, and when should I use each?"
+
+> "How do I draw and animate on an HTML canvas with `requestAnimationFrame`, and
+> keep it accessible and W3C-valid?"
+
+### Learning
+
+The AI tools were also used conversationally to explain specific web-dev concepts
+as they came up — for example, what `package.json`, ESLint, and Prettier configs
+actually do, CSS Grid vs. Flexbox, and why ES6 modules fail over `file://`.
+
+All AI-assisted output was reviewed and tested by me before it went into the
+project. The Blog page is the one page whose content is AI-generated, and it is
+labelled as such.
+
+## Repository Files
+
+- `index.html` — Home page
+- `projects.html` — Projects page
+- `about.html` — About page (my career journey)
+- `blog.html` — Blog page (AI-generated)
+- `css/styles.css` — styling for the entire site
+- `js/main.js` — entry module that wires up the page
+- `js/regression.js` — interactive least-squares regression plot
+- `js/orbit.js` — two-body orbital gravity sandbox
+- `js/palette.js` — ⌘K command palette
+- `js/theme.js` — light/dark theme toggle
+- `js/nav.js` — mobile navigation
+- `js/contact.js` — copy-email button
+- `images/` — image and SVG assets
+- `docs/` — design document, presentation, and video script
+- `package.json`, `eslint.config.js`, `.prettierrc` — tooling and configuration
 
 ## License
 
-[MIT](./LICENSE)
+This project is licensed under the MIT License. See [LICENSE](./LICENSE).
