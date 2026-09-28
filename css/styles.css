@@ -735,9 +735,9 @@ img {
 /* ---------- About page side icons (small, right-floated) ---------- */
 .about-side {
   float: right;
-  width: clamp(96px, 20vw, 140px);
+  width: clamp(170px, 26vw, 260px);
   height: auto;
-  margin: 0.2rem 0 var(--space-sm) var(--space-md);
+  margin: 0.2rem 0 var(--space-sm) var(--space-lg);
   border: var(--border);
   border-radius: var(--radius);
   background-color: var(--panel);
@@ -745,8 +745,8 @@ img {
 
 .about-side-group {
   float: right;
-  width: clamp(96px, 20vw, 140px);
-  margin: 0.2rem 0 var(--space-sm) var(--space-md);
+  width: clamp(170px, 26vw, 260px);
+  margin: 0.2rem 0 var(--space-sm) var(--space-lg);
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
@@ -770,6 +770,6 @@ img {
 @media (max-width: 480px) {
   .about-side,
   .about-side-group {
-    width: 84px;
+    width: 130px;
   }
 }
