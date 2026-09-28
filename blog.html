@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog — Trupal Patel</title>
+    <meta name="author" content="Trupal Patel" />
+    <meta
+      name="description"
+      content="A short article on running computer vision on edge devices — latency, model size, and evaluation. Written with the help of a generative AI tool."
+    />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap nav">
+        <a class="brand" href="./index.html">
+          <img
+            class="brand-mark"
+            src="./images/favicon.svg"
+            alt="Plotted axis logo"
+            width="30"
+            height="30"
+          />
+          Trupal Patel
+        </a>
+        <nav aria-label="Primary">
+          <ul class="nav-list" id="primary-nav">
+            <li><a class="nav-link" href="./index.html">Home</a></li>
+            <li><a class="nav-link" href="./projects.html">Projects</a></li>
+            <li><a class="nav-link" href="./about.html">About</a></li>
+            <li>
+              <a class="nav-link" href="./blog.html" aria-current="page">Blog</a>
+            </li>
+            <li><a class="nav-link" href="./index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button
+            class="btn btn-icon theme-toggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Switch to dark theme"
+          >
+            &#9790;
+          </button>
+          <button
+            class="btn btn-icon nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            aria-label="Toggle navigation menu"
+          >
+            &#9776;
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-banner">
+        <div class="wrap">
+          <span class="section-index">blog()</span>
+          <h1>Getting computer vision onto the edge</h1>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap prose">
+          <p class="ai-note">
+            <strong>Note:</strong> this article was written with the help of a
+            generative AI tool (Claude) and reviewed for accuracy. Model, version,
+            and prompt are documented in the project README.
+          </p>
+
+          <p>
+            A model that scores well in a notebook is only half the job. The other
+            half is making it run where the data actually is &mdash; on a camera,
+            a drone, or a small board in the field &mdash; fast enough and on a
+            power budget that a data-centre GPU never has to worry about. That gap
+            between &ldquo;it works on my machine&rdquo; and &ldquo;it works on the
+            device&rdquo; is where a lot of the interesting engineering lives.
+          </p>
+
+          <h2>Why the edge is hard</h2>
+          <p>
+            Edge deployment trades away compute and memory in exchange for low
+            latency, privacy, and independence from a network connection. A
+            detector that comfortably runs at high resolution on a workstation may
+            be far too heavy for an embedded board. The practical questions become:
+            how large is the model, how many milliseconds does one frame take, and
+            how much of that latency the application can actually tolerate.
+          </p>
+
+          <h2>Techniques that help</h2>
+          <p>
+            Several tools narrow the gap. Quantisation shrinks weights from
+            floating point to lower-precision integers, cutting model size and
+            speeding up inference with a small, measurable accuracy cost. Pruning
+            removes redundant connections. Choosing an architecture designed for
+            efficiency, rather than scaling down a large one, often wins outright.
+            And exporting to a runtime tuned for the target hardware can matter as
+            much as the model itself.
+          </p>
+
+          <h2>Measure what the user feels</h2>
+          <p>
+            The most useful metric on the edge is rarely a single accuracy number.
+            It is the end-to-end latency a person or a downstream system
+            experiences, measured on the real device under realistic input, not on
+            a benchmark. Reporting accuracy alongside latency and model size gives
+            an honest picture of the trade-off, and it makes it obvious when a
+            small drop in accuracy buys a large gain in responsiveness.
+          </p>
+
+          <h2>The takeaway</h2>
+          <p>
+            Edge computer vision rewards engineers who care about the unglamorous
+            parts: preprocessing, quantisation, and honest measurement on real
+            hardware. The reward is a system that keeps working when the network
+            does not &mdash; which, for most real deployments, is the whole point.
+          </p>
+
+          <p><a href="./projects.html">See the projects &rarr;</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>&copy; <span class="footer-year">2026</span> Trupal Patel</p>
+        <p>Built with vanilla HTML, CSS &amp; ES6 modules.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

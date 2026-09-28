@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects — Trupal Patel</title>
+    <meta name="author" content="Trupal Patel" />
+    <meta
+      name="description"
+      content="Computer vision, edge AI, IoT, and full-stack projects by Trupal Patel, including work at ISRO and published research."
+    />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap nav">
+        <a class="brand" href="./index.html">
+          <img
+            class="brand-mark"
+            src="./images/favicon.svg"
+            alt="Plotted axis logo"
+            width="30"
+            height="30"
+          />
+          Trupal Patel
+        </a>
+        <nav aria-label="Primary">
+          <ul class="nav-list" id="primary-nav">
+            <li><a class="nav-link" href="./index.html">Home</a></li>
+            <li>
+              <a class="nav-link" href="./projects.html" aria-current="page"
+                >Projects</a
+              >
+            </li>
+            <li><a class="nav-link" href="./about.html">About</a></li>
+            <li><a class="nav-link" href="./blog.html">Blog</a></li>
+            <li><a class="nav-link" href="./index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button
+            class="btn btn-icon theme-toggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Switch to dark theme"
+          >
+            &#9790;
+          </button>
+          <button
+            class="btn btn-icon nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            aria-label="Toggle navigation menu"
+          >
+            &#9776;
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-banner">
+        <div class="wrap">
+          <span class="section-index">projects()</span>
+          <h1>Projects</h1>
+          <p class="lead">
+            Systems I&rsquo;ve built end to end across computer vision, edge AI,
+            IoT, and the web &mdash; several published or presented at
+            international conferences.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="project-list">
+            <article class="project" id="detection">
+              <img
+                class="project-cover"
+                src="./images/project-detection.svg"
+                alt="Object detection with bounding boxes labelled person and car"
+                width="480"
+                height="300"
+              />
+              <div>
+                <h2 class="project-title">Real-time object detection on Jetson Nano</h2>
+                <p>
+                  Implemented YOLOv8-based object detection on an NVIDIA Jetson
+                  Nano, reducing detection latency for real-time edge inference.
+                  Presented at the 9th International Conference on ICT for
+                  Sustainable Development (ICT4SD 2024) and published in Springer
+                  LNNS.
+                </p>
+                <ul class="tag-row">
+                  <li class="tag">YOLOv8</li>
+                  <li class="tag">Jetson Nano</li>
+                  <li class="tag">Edge AI</li>
+                </ul>
+              </div>
+              <span class="project-meta"
+                ><a href="https://link.springer.com/chapter/10.1007/978-981-97-8602-2_32"
+                  >paper &#8599;</a
+                ></span
+              >
+            </article>
+
+            <article class="project" id="wastebin">
+              <img
+                class="project-cover"
+                src="./images/project-iot.svg"
+                alt="IoT waste bin sending data to a cloud service"
+                width="480"
+                height="300"
+              />
+              <div>
+                <h2 class="project-title">Real-time waste bin monitoring</h2>
+                <p>
+                  Designed a smart waste-management system using ultrasonic
+                  sensors and ThingSpeak cloud analytics for real-time
+                  monitoring, with scalability for smart-city deployment. Accepted
+                  at SMARTCOMM 2025 and published in Springer LNNS.
+                </p>
+                <ul class="tag-row">
+                  <li class="tag">IoT</li>
+                  <li class="tag">Raspberry Pi</li>
+                  <li class="tag">ThingSpeak</li>
+                </ul>
+              </div>
+              <span class="project-meta"
+                ><a href="https://share.google/Nubim1sUaMbx6birl">paper &#8599;</a></span
+              >
+            </article>
+
+            <article class="project" id="satellite">
+              <img
+                class="project-cover"
+                src="./images/project-satellite.svg"
+                alt="Grid of satellite image tiles being mosaicked together"
+                width="480"
+                height="300"
+              />
+              <div>
+                <h2 class="project-title">Satellite image processing at ISRO</h2>
+                <p>
+                  During an internship at the Indian Space Research Organisation,
+                  worked on radiometric balancing of high-resolution mosaic images using
+                  the SNAP environment, improving visual consistency and
+                  geospatial accuracy across satellite imagery.
+                </p>
+                <ul class="tag-row">
+                  <li class="tag">Python</li>
+                  <li class="tag">OpenCV</li>
+                  <li class="tag">Geospatial</li>
+                </ul>
+              </div>
+              <span class="project-meta">ISRO internship</span>
+            </article>
+
+            <article class="project" id="hyperspectral">
+              <img
+                class="project-cover"
+                src="./images/project-hyperspectral.svg"
+                alt="Leaf with hyperspectral bands used for pathogen detection"
+                width="480"
+                height="300"
+              />
+              <div>
+                <h2 class="project-title">Hyperspectral leaf pathogen detection</h2>
+                <p>
+                  Research on early pathogen detection from hyperspectral leaf
+                  imagery using deep learning, with a preprocessing framework that
+                  improved feature-extraction accuracy for agricultural
+                  applications.
+                </p>
+                <ul class="tag-row">
+                  <li class="tag">Deep Learning</li>
+                  <li class="tag">Hyperspectral</li>
+                  <li class="tag">Research</li>
+                </ul>
+              </div>
+              <span class="project-meta">Research intern</span>
+            </article>
+
+            <article class="project" id="bloodbank">
+              <img
+                class="project-cover"
+                src="./images/project-fullstack.svg"
+                alt="Full-stack MERN application layers: React, Express, Node, MongoDB"
+                width="480"
+                height="300"
+              />
+              <div>
+                <h2 class="project-title">Online blood bank &amp; donor management</h2>
+                <p>
+                  A full-stack MERN application enabling donor&ndash;organizer
+                  communication with role-based authentication and automated
+                  inventory tracking, reducing manual errors by 15%.
+                </p>
+                <ul class="tag-row">
+                  <li class="tag">React</li>
+                  <li class="tag">Node.js</li>
+                  <li class="tag">MongoDB</li>
+                </ul>
+              </div>
+              <span class="project-meta">Full-stack</span>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>&copy; <span class="footer-year">2026</span> Trupal Patel</p>
+        <p>Built with vanilla HTML, CSS &amp; ES6 modules.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

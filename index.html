@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trupal Patel — Computer Vision &amp; ML Engineer</title>
+    <meta name="author" content="Trupal Patel" />
+    <meta
+      name="description"
+      content="Trupal Patel is an MS Computer Science student at Northeastern University and a published researcher in computer vision, deep learning, and edge AI."
+    />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+
+    <meta property="og:title" content="Trupal Patel — Computer Vision &amp; ML Engineer" />
+    <meta
+      property="og:description"
+      content="Computer vision, deep learning, and edge AI — from satellite imagery at ISRO to real-time detection on Jetson Nano."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./images/screenshot.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap nav">
+        <a class="brand" href="./index.html">
+          <img
+            class="brand-mark"
+            src="./images/favicon.svg"
+            alt="Plotted axis logo"
+            width="30"
+            height="30"
+          />
+          Trupal Patel
+        </a>
+        <nav aria-label="Primary">
+          <ul class="nav-list" id="primary-nav">
+            <li>
+              <a class="nav-link" href="./index.html" aria-current="page">Home</a>
+            </li>
+            <li><a class="nav-link" href="./projects.html">Projects</a></li>
+            <li><a class="nav-link" href="./about.html">About</a></li>
+            <li><a class="nav-link" href="./blog.html">Blog</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button
+            class="btn btn-icon theme-toggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Switch to dark theme"
+          >
+            &#9790;
+          </button>
+          <button
+            class="btn btn-icon nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            aria-label="Toggle navigation menu"
+          >
+            &#9776;
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO with the interactive regression playground -->
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="hero-kicker">computer vision · deep learning · edge AI</p>
+            <h1>I build vision systems, from satellites to the edge.</h1>
+            <p class="hero-lede">
+              I&rsquo;m Trupal &mdash; an MS Computer Science student at
+              Northeastern and a published researcher. I build computer-vision
+              and deep-learning systems that run where they&rsquo;re needed, on
+              the cloud or on-device.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="./projects.html">See my work</a>
+              <a class="btn" href="#contact">Get in touch</a>
+            </div>
+            <p class="plot-hint">
+              tip: press &#8984;K or / to open the command palette
+            </p>
+          </div>
+
+          <div>
+            <div class="plot-card">
+              <div class="plot-head">
+                <span class="plot-title">least-squares.playground</span>
+                <button class="btn btn-icon plot-reset" type="button">
+                  reset
+                </button>
+              </div>
+              <canvas
+                class="plot-canvas"
+                aria-label="Interactive scatter plot. Click to add data points and a best-fit line updates."
+                role="img"
+              ></canvas>
+              <div class="plot-readout" role="status" aria-live="polite"></div>
+            </div>
+            <p class="plot-hint">
+              click the plot to drop points &mdash; the line refits live &#10022;
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ORBITAL SANDBOX (space) -->
+      <section class="section" id="orbit">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="section-index">orbit()</span>
+            <h2>Orbital sandbox</h2>
+          </div>
+          <p class="lead">
+            A little two-body gravity simulator, because I love space (and once
+            spent a summer wrangling satellite imagery at ISRO). Drag from a point
+            to launch a satellite &mdash; the arrow sets its velocity. A quick tap
+            drops one straight into a circular orbit.
+          </p>
+          <div class="plot-card">
+            <div class="plot-head">
+              <span class="plot-title">two-body.gravity</span>
+              <button class="btn btn-icon orbit-reset" type="button">clear</button>
+            </div>
+            <canvas
+              class="orbit-canvas"
+              role="img"
+              aria-label="Interactive orbital simulator. Drag to launch a satellite around a central planet; tap for a circular orbit."
+            ></canvas>
+            <div class="plot-readout orbit-readout" role="status" aria-live="polite"></div>
+          </div>
+          <p class="plot-hint">
+            drag to aim &amp; launch &middot; tap for a circular orbit &#10022;
+          </p>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="section-index">about()</span>
+            <h2>Turning pixels and sensor data into decisions.</h2>
+          </div>
+          <div class="about-grid">
+            <img
+              class="about-photo"
+              src="./images/avatar.svg"
+              alt="Portrait of Trupal Patel"
+              width="240"
+              height="240"
+            />
+            <div>
+              <p>
+                I started in computer engineering and found my footing in
+                computer vision during an internship at the Indian Space Research
+                Organisation, working on satellite image processing. Since then
+                I&rsquo;ve published research on edge inference and IoT analytics,
+                and I&rsquo;m now pursuing my Master&rsquo;s at Northeastern.
+              </p>
+              <p>
+                I like problems that span the whole stack: capturing the data,
+                training the model, and shipping it somewhere real &mdash; a
+                Jetson Nano, a Raspberry Pi, or a web app people actually use.
+              </p>
+              <div class="stats">
+                <div class="stat">
+                  <div class="stat-num">2</div>
+                  <div class="stat-label">Springer publications</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-num">9.45</div>
+                  <div class="stat-label">undergrad CGPA / 10</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-num">3</div>
+                  <div class="stat-label">research &amp; industry roles</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="section" id="education">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="section-index">education()</span>
+            <h2>Education</h2>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Northeastern University</h3>
+              <p>
+                MS in Computer Science, Khoury College &mdash; Boston, MA.
+                Jan 2026 &ndash; May 2028 (expected).
+              </p>
+            </article>
+            <article class="card">
+              <h3>Charotar University of Science and Technology</h3>
+              <p>
+                B.Tech in Computer Engineering &mdash; Changa, Gujarat.
+                2021 &ndash; 2025. CGPA 9.45 / 10.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOCUS / SKILLS -->
+      <section class="section" id="focus">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="section-index">focus()</span>
+            <h2>What I work on</h2>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Computer vision</h3>
+              <p>
+                Satellite image processing, object detection, and image
+                enhancement pipelines.
+              </p>
+              <ul class="tag-row">
+                <li class="tag">OpenCV</li>
+                <li class="tag">PyTorch</li>
+                <li class="tag">YOLOv8</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Deep learning</h3>
+              <p>
+                CNNs and preprocessing frameworks, including hyperspectral image
+                analysis for agriculture.
+              </p>
+              <ul class="tag-row">
+                <li class="tag">TensorFlow</li>
+                <li class="tag">Scikit-Learn</li>
+                <li class="tag">NumPy</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Edge &amp; IoT</h3>
+              <p>
+                On-device inference and cloud analytics for real-time, low-latency
+                systems.
+              </p>
+              <ul class="tag-row">
+                <li class="tag">Jetson Nano</li>
+                <li class="tag">Raspberry Pi</li>
+                <li class="tag">ThingSpeak</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Full-stack</h3>
+              <p>
+                End-to-end web applications with authentication and data
+                management.
+              </p>
+              <ul class="tag-row">
+                <li class="tag">React</li>
+                <li class="tag">Node.js</li>
+                <li class="tag">MongoDB</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- COURSES -->
+      <section class="section" id="courses">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="section-index">courses()</span>
+            <h2>Relevant coursework</h2>
+          </div>
+          <!-- TODO: adjust to the exact courses you are enrolled in at Northeastern -->
+          <ul class="tag-row">
+            <li class="tag">Web Development (CS5610)</li>
+            <li class="tag">Algorithms</li>
+            <li class="tag">Machine Learning</li>
+            <li class="tag">Computer Vision</li>
+            <li class="tag">Database Management</li>
+            <li class="tag">Programming Design Paradigm</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section" id="work">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="section-index">projects()</span>
+            <h2>Selected work</h2>
+          </div>
+          <div class="project-list">
+            <article class="project">
+              <img
+                class="project-cover"
+                src="./images/project-detection.svg"
+                alt="Object detection with bounding boxes labelled person and car"
+                width="480"
+                height="300"
+              />
+              <div>
+                <h3 class="project-title">
+                  <a href="./projects.html#detection"
+                    >Real-time object detection on Jetson Nano</a
+                  >
+                </h3>
+                <p>
+                  YOLOv8 detection running on-device for low-latency edge
+                  inference. Presented at ICT4SD 2024, published in Springer LNNS.
+                </p>
+              </div>
+              <span class="project-meta">YOLOv8 · Edge</span>
+            </article>
+
+            <article class="project">
+              <img
+                class="project-cover"
+                src="./images/project-iot.svg"
+                alt="IoT waste bin sending data to a cloud service"
+                width="480"
+                height="300"
+              />
+              <div>
+                <h3 class="project-title">
+                  <a href="./projects.html#wastebin"
+                    >Real-time waste bin monitoring</a
+                  >
+                </h3>
+                <p>
+                  Smart-city IoT system using ultrasonic sensors and ThingSpeak
+                  cloud analytics. Accepted at SMARTCOMM 2025 (Springer).
+                </p>
+              </div>
+              <span class="project-meta">IoT · Cloud</span>
+            </article>
+
+            <article class="project">
+              <img
+                class="project-cover"
+                src="./images/project-satellite.svg"
+                alt="Grid of satellite image tiles being mosaicked together"
+                width="480"
+                height="300"
+              />
+              <div>
+                <h3 class="project-title">
+                  <a href="./projects.html#satellite"
+                    >Satellite image processing at ISRO</a
+                  >
+                </h3>
+                <p>
+                  Radiometric balancing of high-resolution mosaic images in the SNAP
+                  environment, improving visual consistency and geospatial
+                  accuracy.
+                </p>
+              </div>
+              <span class="project-meta">OpenCV · Python</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESEARCH -->
+      <section class="section" id="research">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="section-index">research()</span>
+            <h2>Research &amp; publications</h2>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Real-time Object Detection on Jetson Nano</h3>
+              <p>
+                9th International Conference on ICT for Sustainable Development
+                (ICT4SD 2024) &mdash; Springer LNNS.
+              </p>
+              <p>
+                <a
+                  href="https://link.springer.com/chapter/10.1007/978-981-97-8602-2_32"
+                  >Read the chapter &#8599;</a
+                >
+              </p>
+            </article>
+            <article class="card">
+              <h3>IoT-Enabled Waste Bin Monitoring</h3>
+              <p>
+                Raspberry Pi and cloud-based analytics. Accepted at SMARTCOMM
+                2025 &mdash; Springer.
+              </p>
+              <p>
+                <a href="https://share.google/Nubim1sUaMbx6birl"
+                  >Reference &#8599;</a
+                >
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOBBIES -->
+      <section class="section" id="hobbies">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="section-index">hobbies()</span>
+            <h2>Away from the keyboard</h2>
+          </div>
+          <!-- TODO: replace with your own hobbies -->
+          <ul class="tag-row">
+            <li class="tag">Astronomy</li>
+            <li class="tag">Cricket</li>
+            <li class="tag">Photography</li>
+            <li class="tag">Chess</li>
+            <li class="tag">Travel</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="section-index">contact()</span>
+            <h2>Let&rsquo;s build something.</h2>
+          </div>
+          <p>
+            I&rsquo;m open to internships and research collaborations in computer
+            vision and machine learning. The fastest way to reach me is email.
+          </p>
+          <div class="contact-actions">
+            <button
+              class="btn btn-primary copy-email"
+              type="button"
+              data-email="Patel.trupa@northeastern.edu"
+            >
+              Copy email address
+            </button>
+            <!-- TODO: add your GitHub profile URL -->
+            <a class="btn" href="https://github.com/">GitHub</a>
+            <a
+              class="btn"
+              href="https://www.linkedin.com/in/trupal-patel-08a959268"
+              >LinkedIn</a
+            >
+          </div>
+          <p class="copy-status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>&copy; <span class="footer-year">2026</span> Trupal Patel</p>
+        <p>Built with vanilla HTML, CSS &amp; ES6 modules.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
