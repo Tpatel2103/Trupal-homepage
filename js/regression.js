@@ -108,7 +108,8 @@ export function initRegression(canvas, readout, resetBtn) {
     const fit = leastSquares(points);
     if (fit) {
       const a = toPixel({ x: 0, y: fit.intercept });
-      const b = toPixel({ x: DATA_MAX, y: fit.slope * DATA_MAX + fit.intercept });
+      const yEnd = fit.slope * DATA_MAX + fit.intercept;
+      const b = toPixel({ x: DATA_MAX, y: yEnd });
       ctx.strokeStyle = c.cool;
       ctx.lineWidth = 3;
       ctx.beginPath();
@@ -132,11 +133,13 @@ export function initRegression(canvas, readout, resetBtn) {
     if (readout) {
       if (fit) {
         const sign = fit.intercept >= 0 ? "+" : "\u2212";
-        readout.innerHTML =
-          `<span>y = <b>${fit.slope.toFixed(2)}</b>x ${sign} ` +
-          `<b>${Math.abs(fit.intercept).toFixed(1)}</b></span>` +
-          `<span>R\u00b2 = <b>${fit.r2.toFixed(3)}</b></span>` +
-          `<span>n = <b>${points.length}</b></span>`;
+        const intercept = Math.abs(fit.intercept).toFixed(1);
+        const parts = [
+          `<span>y = <b>${fit.slope.toFixed(2)}</b>x ${sign} <b>${intercept}</b></span>`,
+          `<span>R\u00b2 = <b>${fit.r2.toFixed(3)}</b></span>`,
+          `<span>n = <b>${points.length}</b></span>`,
+        ];
+        readout.innerHTML = parts.join("");
       } else {
         readout.innerHTML = "<span>Add at least two points to fit a line.</span>";
       }

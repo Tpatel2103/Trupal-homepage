@@ -31,24 +31,114 @@ function fire(name) {
 }
 
 const COMMANDS = [
-  { label: "Go to Home", hint: "page", keys: "home", run: () => (window.location.href = "./index.html") },
-  { label: "Go to Projects", hint: "page", keys: "projects work", run: () => (window.location.href = "./projects.html") },
-  { label: "Go to About", hint: "page", keys: "about bio", run: () => (window.location.href = "./about.html") },
-  { label: "Go to Blog", hint: "page", keys: "blog writing article", run: () => (window.location.href = "./blog.html") },
-  { label: "Jump to Focus areas", hint: "section", keys: "skills focus", run: () => go("focus") },
-  { label: "Jump to Skills", hint: "section", keys: "skills tech stack languages", run: () => go("skills") },
-  { label: "Jump to Orbital sandbox", hint: "section", keys: "orbit space satellite sandbox", run: () => go("orbit") },
-  { label: "Jump to Courses", hint: "section", keys: "courses classes", run: () => go("courses") },
-  { label: "Jump to Hobbies", hint: "section", keys: "hobbies", run: () => go("hobbies") },
-  { label: "Jump to Contact", hint: "section", keys: "contact email", run: () => go("contact") },
-  { label: "Toggle light / dark theme", hint: "action", keys: "theme dark light mode", run: () => clickIfPresent(".theme-toggle") },
-  { label: "Copy my email", hint: "action", keys: "email copy contact", run: () => clickIfPresent(".copy-email") },
-  { label: "Scatter random points into the plot", hint: "plot", keys: "random points plot data", run: () => fire("plot:random") },
-  { label: "Reset the plot", hint: "plot", keys: "reset plot clear", run: () => fire("plot:reset") },
-  { label: "Launch a random satellite", hint: "orbit", keys: "orbit satellite space launch", run: () => fire("orbit:random") },
-  { label: "Clear all orbits", hint: "orbit", keys: "orbit clear reset space", run: () => fire("orbit:reset") },
-  { label: "Open GitHub", hint: "link", keys: "github code", run: () => window.open("https://github.com/", "_blank", "noopener") },
-  { label: "Open LinkedIn", hint: "link", keys: "linkedin", run: () => window.open("https://www.linkedin.com/", "_blank", "noopener") },
+  {
+    label: "Go to Home",
+    hint: "page",
+    keys: "home",
+    run: () => (window.location.href = "./index.html"),
+  },
+  {
+    label: "Go to Projects",
+    hint: "page",
+    keys: "projects work",
+    run: () => (window.location.href = "./projects.html"),
+  },
+  {
+    label: "Go to About",
+    hint: "page",
+    keys: "about bio",
+    run: () => (window.location.href = "./about.html"),
+  },
+  {
+    label: "Go to Blog",
+    hint: "page",
+    keys: "blog writing article",
+    run: () => (window.location.href = "./blog.html"),
+  },
+  {
+    label: "Jump to Focus areas",
+    hint: "section",
+    keys: "skills focus",
+    run: () => go("focus"),
+  },
+  {
+    label: "Jump to Skills",
+    hint: "section",
+    keys: "skills tech stack languages",
+    run: () => go("skills"),
+  },
+  {
+    label: "Jump to Orbital sandbox",
+    hint: "section",
+    keys: "orbit space satellite sandbox",
+    run: () => go("orbit"),
+  },
+  {
+    label: "Jump to Courses",
+    hint: "section",
+    keys: "courses classes",
+    run: () => go("courses"),
+  },
+  {
+    label: "Jump to Hobbies",
+    hint: "section",
+    keys: "hobbies",
+    run: () => go("hobbies"),
+  },
+  {
+    label: "Jump to Contact",
+    hint: "section",
+    keys: "contact email",
+    run: () => go("contact"),
+  },
+  {
+    label: "Toggle light / dark theme",
+    hint: "action",
+    keys: "theme dark light mode",
+    run: () => clickIfPresent(".theme-toggle"),
+  },
+  {
+    label: "Copy my email",
+    hint: "action",
+    keys: "email copy contact",
+    run: () => clickIfPresent(".copy-email"),
+  },
+  {
+    label: "Scatter random points into the plot",
+    hint: "plot",
+    keys: "random points plot data",
+    run: () => fire("plot:random"),
+  },
+  {
+    label: "Reset the plot",
+    hint: "plot",
+    keys: "reset plot clear",
+    run: () => fire("plot:reset"),
+  },
+  {
+    label: "Launch a random satellite",
+    hint: "orbit",
+    keys: "orbit satellite space launch",
+    run: () => fire("orbit:random"),
+  },
+  {
+    label: "Clear all orbits",
+    hint: "orbit",
+    keys: "orbit clear reset space",
+    run: () => fire("orbit:reset"),
+  },
+  {
+    label: "Open GitHub",
+    hint: "link",
+    keys: "github code",
+    run: () => window.open("https://github.com/", "_blank", "noopener"),
+  },
+  {
+    label: "Open LinkedIn",
+    hint: "link",
+    keys: "linkedin",
+    run: () => window.open("https://www.linkedin.com/", "_blank", "noopener"),
+  },
 ];
 
 export function initPalette() {
@@ -109,7 +199,7 @@ export function initPalette() {
   const filter = () => {
     const q = input.value.trim().toLowerCase();
     filtered = COMMANDS.filter(
-      (c) => !q || (c.label + " " + c.keys).toLowerCase().includes(q),
+      (c) => !q || (c.label + " " + c.keys).toLowerCase().includes(q)
     );
     active = 0;
     draw();
@@ -165,10 +255,11 @@ export function initPalette() {
   window.addEventListener("keydown", (event) => {
     const key = event.key.toLowerCase();
     const typing = /^(input|textarea)$/i.test(event.target.tagName);
+    const isOpen = backdrop.classList.contains("is-open");
     if ((event.metaKey || event.ctrlKey) && key === "k") {
       event.preventDefault();
       open();
-    } else if (key === "/" && !typing && !backdrop.classList.contains("is-open")) {
+    } else if (key === "/" && !typing && !isOpen) {
       event.preventDefault();
       open();
     }

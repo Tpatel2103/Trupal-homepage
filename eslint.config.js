@@ -1,33 +1,58 @@
-/**
- * ESLint flat config.
- * NOTE: If your class provides its own eslint config file, replace
- * this file's contents with theirs — the source below is written to
- * pass a standard modern (flat) config with the browser globals the
- * page uses.
- */
+import globals from 'globals';
+import js from '@eslint/js';
+import eslintConfigPrettier from 'eslint-config-prettier';
+import prettier from 'eslint-plugin-prettier';
+
 export default [
   {
-    files: ["js/**/*.js"],
+    files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
+
     languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: "module",
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+
       globals: {
-        window: "readonly",
-        document: "readonly",
-        localStorage: "readonly",
-        navigator: "readonly",
-        getComputedStyle: "readonly",
-        requestAnimationFrame: "readonly",
-        CustomEvent: "readonly",
-        setTimeout: "readonly",
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2025,
       },
     },
+    plugins: {
+      prettier: prettier,
+    },
+
     rules: {
-      "no-unused-vars": "error",
-      "no-undef": "error",
-      "prefer-const": "error",
-      "no-var": "error",
-      eqeqeq: "error",
+      // ESLint recommended rules
+      ...js.configs.recommended.rules,
+
+      indent: [
+        'error',
+        2,
+        {
+          SwitchCase: 1,
+        },
+      ],
+
+      'linebreak-style': ['error', 'unix'],
+      quotes: ['error', 'double'],
+      semi: ['error', 'always'],
+      'no-console': 0,
+
+      // Prettier integration - this runs Prettier through ESLint
+      'prettier/prettier': [
+        'error',
+        {
+          endOfLine: 'lf',
+          trailingComma: 'es5',
+          singleQuote: false,
+        },
+      ],
     },
   },
+  eslintConfigPrettier,
 ];

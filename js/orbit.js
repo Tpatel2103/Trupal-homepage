@@ -15,7 +15,7 @@ const TAP_DISTANCE = 6;
 const LAUNCH_SCALE = 0.08;
 
 const prefersReducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)",
+  "(prefers-reduced-motion: reduce)"
 ).matches;
 
 function readColors() {
@@ -63,7 +63,12 @@ export function initOrbit(canvas, readout, resetBtn) {
       dy = Math.sin(ang) * d;
     }
     const speed = Math.sqrt(MU / d);
-    return { x: (cx + dx), y: (cy + dy), vx: (-dy / d) * speed, vy: (dx / d) * speed };
+    return {
+      x: cx + dx,
+      y: cy + dy,
+      vx: (-dy / d) * speed,
+      vy: (dx / d) * speed,
+    };
   };
 
   const addSat = (x, y, vx, vy) => {
@@ -118,10 +123,10 @@ export function initOrbit(canvas, readout, resetBtn) {
     let html = `<span>satellites: <b>${sats.length}</b></span>`;
     if (latest) {
       const speed = Math.hypot(latest.vx, latest.vy);
-      const alt = Math.max(0, Math.hypot(latest.x - cx, latest.y - cy) - EARTH_R);
-      html +=
-        `<span>speed <b>${speed.toFixed(1)}</b></span>` +
-        `<span>altitude <b>${alt.toFixed(0)}</b></span>`;
+      const dist = Math.hypot(latest.x - cx, latest.y - cy);
+      const alt = Math.max(0, dist - EARTH_R);
+      html += `<span>speed <b>${speed.toFixed(1)}</b></span>`;
+      html += `<span>altitude <b>${alt.toFixed(0)}</b></span>`;
     } else {
       html += "<span>drag to launch one</span>";
     }
@@ -261,7 +266,7 @@ export function initOrbit(canvas, readout, resetBtn) {
         drag.x0,
         drag.y0,
         (drag.x - drag.x0) * LAUNCH_SCALE,
-        (drag.y - drag.y0) * LAUNCH_SCALE,
+        (drag.y - drag.y0) * LAUNCH_SCALE
       );
     }
   };

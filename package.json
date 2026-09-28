@@ -1,18 +1,23 @@
 {
-  "name": "trupal-patel-homepage",
+  "name": "trupal-jageshkumar-patel-homepage",
   "version": "1.0.0",
-  "description": "Personal homepage for Trupal Patel (computer vision & ML), built with vanilla HTML5, CSS3, and ES6 modules.",
+  "description": "Personal homepage for Trupal Jageshkumar Patel (computer vision & ML), built with vanilla HTML5, CSS3, and ES6 modules.",
   "type": "module",
-  "author": "Trupal Patel",
+  "author": "Trupal Jageshkumar Patel",
   "license": "MIT",
   "scripts": {
     "start": "npx serve .",
-    "lint": "eslint .",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "lint": "eslint js",
+    "lint:fix": "eslint js --fix",
+    "format": "prettier --write js",
+    "format:check": "prettier --check js"
   },
   "devDependencies": {
+    "@eslint/js": "^9.11.0",
     "eslint": "^9.11.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.9.0",
     "prettier": "^3.3.3",
     "serve": "^14.2.3"
   }

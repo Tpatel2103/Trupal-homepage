@@ -18,7 +18,7 @@ function boot() {
     initRegression(
       plot,
       document.querySelector(".plot-readout"),
-      document.querySelector(".plot-reset"),
+      document.querySelector(".plot-reset")
     );
   }
 
@@ -27,18 +27,18 @@ function boot() {
     initOrbit(
       orbit,
       document.querySelector(".orbit-readout"),
-      document.querySelector(".orbit-reset"),
+      document.querySelector(".orbit-reset")
     );
   }
 
   initTheme(document.querySelector(".theme-toggle"));
   initNav(
     document.querySelector(".nav-toggle"),
-    document.querySelector(".nav-list"),
+    document.querySelector(".nav-list")
   );
   initContact(
     document.querySelector(".copy-email"),
-    document.querySelector(".copy-status"),
+    document.querySelector(".copy-status")
   );
 
   initPalette();

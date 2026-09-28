@@ -32,7 +32,7 @@ function applyTheme(theme, button) {
     button.textContent = isDark ? "\u2600" : "\u263e";
     button.setAttribute(
       "aria-label",
-      isDark ? "Switch to light theme" : "Switch to dark theme",
+      isDark ? "Switch to light theme" : "Switch to dark theme"
     );
   }
   window.dispatchEvent(new CustomEvent("themechange", { detail: { theme } }));
@@ -48,10 +48,8 @@ export function initTheme(button) {
   }
 
   button.addEventListener("click", () => {
-    const next =
-      document.documentElement.getAttribute("data-theme") === "dark"
-        ? "light"
-        : "dark";
+    const current = document.documentElement.getAttribute("data-theme");
+    const next = current === "dark" ? "light" : "dark";
     applyTheme(next, button);
     store(next);
   });

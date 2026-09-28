@@ -1,4 +1,6 @@
-# Design Document — Constellation Homepage
+# Trupal Jageshkumar Patel's Personal Homepage
+
+**Design Document**
 
 ## 1. Project description
 
@@ -24,9 +26,9 @@ Blog article is the AI-generated page. Deployed as a public static site.
 
 ## 2. User personas
 
-### Persona A — Maya, the recruiter
+### Persona A — Mansi, the recruiter
 
-- **Age / role:** 34, technical recruiter at a mid-size company.
+- **Age / role:** 25, technical recruiter at a mid-size company.
 - **Context:** skims dozens of portfolios a day, often on a laptop between calls.
 - **Goals:** quickly judge whether this person's skills fit an open ML role, and
   find a way to contact them.
@@ -35,18 +37,18 @@ Blog article is the AI-generated page. Deployed as a public static site.
 - **Needs from the page:** a one-line summary of who this is, a scannable list of
   focus areas, and an obvious contact action.
 
-### Persona B — Dev, the hiring engineer
+### Persona B — Margi, the hiring engineer
 
-- **Age / role:** 29, senior ML engineer who will interview the candidate.
+- **Age / role:** 28, senior ML engineer who will interview the candidate.
 - **Context:** wants substance — did this person actually ship anything?
 - **Goals:** read a couple of project write-ups and check that the work is real.
 - **Frustrations:** vague project cards with no outcome or decision explained.
 - **Needs from the page:** project pages with the problem, the approach, and the
   result stated plainly; links to code.
 
-### Persona C — Sam, a fellow student / peer
+### Persona C — Janvi, a fellow student / peer
 
-- **Age / role:** 22, classmate exploring how others built their homepage.
+- **Age / role:** 23, classmate exploring how others built their homepage.
 - **Context:** curious about the tech and the "creative addition."
 - **Goals:** see the interactive component and understand the build.
 - **Frustrations:** sites that are impressive but impossible to learn from.
@@ -56,18 +58,18 @@ Blog article is the AI-generated page. Deployed as a public static site.
 
 ## 3. User stories
 
-1. **As Maya (recruiter),** I want a one-sentence summary of who this person is
+1. **As Mansi (recruiter),** I want a one-sentence summary of who this person is
    at the top of the page, so that I can decide in seconds whether to keep
    reading. _(Home hero headline + lede.)_
-2. **As Maya,** I want an obvious way to copy the contact email, so that I can
+2. **As Mansi,** I want an obvious way to copy the contact email, so that I can
    reach out without hunting. _(Copy-email button with confirmation.)_
-3. **As Dev (hiring engineer),** I want to open a projects page and read what
+3. **As Margi (hiring engineer),** I want to open a projects page and read what
    each project actually achieved, so that I can trust the work is real.
    _(Projects page with problem/approach/result per card.)_
-4. **As Dev,** I want to jump straight to a specific project, so that I don't
+4. **As Margi,** I want to jump straight to a specific project, so that I don't
    scroll past ones I don't care about. _(Anchor links from the home cards to
    `projects.html#id`.)_
-5. **As Sam (peer),** I want to interact with the regression playground, so that
+5. **As Janvi (peer),** I want to interact with the regression playground, so that
    I can experience the creative component. _(Click-to-add-point canvas that
    refits a least-squares line live.)_
 6. **As any visitor on my phone,** I want the navigation to collapse into a menu
@@ -104,76 +106,15 @@ Blog article is the AI-generated page. Deployed as a public static site.
 
 ### Home (desktop)
 
-```
-┌───────────────────────────────────────────────────────────┐
-│  ✦ Trupal Patel      Home  Projects  About  Contact   ☀  ☰   │  sticky nav
-├───────────────────────────────────────────────────────────┤
-│  data · machine learning · MLOps    ┌───────────────────┐   │
-│  I fit models to the messy          │ least-squares  [x]│   │  HERO
-│  real world.                        │   .·  ·/          │   │
-│  [ See my work ] [ Get in touch ]   │  · /·   (live plot)│  │
-│                                     │ y=0.6x+12  R²=.94 │   │
-│                                     └───────────────────┘   │
-├───────────────────────────────────────────────────────────┤
-│  ABOUT                                                       │
-│  [portrait]   paragraph …                                   │
-│               ┌────────┐ ┌────────┐ ┌────────┐              │
-│               │  4+    │ │  12    │ │  3     │  stats grid   │
-│               └────────┘ └────────┘ └────────┘              │
-├───────────────────────────────────────────────────────────┤
-│  FOCUS AREAS   [card] [card] [card] [card]   (auto-fit grid)│
-├───────────────────────────────────────────────────────────┤
-│  FEATURED PROJECTS   [cover]     [cover]     [cover]         │
-│                      title       title       title          │
-├───────────────────────────────────────────────────────────┤
-│  CONTACT   [ Copy email address ]  GitHub  LinkedIn         │
-├───────────────────────────────────────────────────────────┤
-│  © 2026 Trupal Patel            Built with vanilla HTML/CSS/JS │
-└───────────────────────────────────────────────────────────┘
-```
+![Home page — desktop layout](images/wf-home-desktop.png)
 
 ### Home (mobile)
 
-```
-┌───────────────────────┐
-│ ✦ Trupal Patel    ☀  ☰  │
-├───────────────────────┤
-│  · live plot ·        │
-│  headline             │
-│  lede                 │
-│  [ See my work ]      │
-│  [ Get in touch ]     │
-├───────────────────────┤
-│  ABOUT (stacked)      │
-│  [portrait]           │
-│  paragraph            │
-│  [stat] [stat] [stat] │  (1 col)
-├───────────────────────┤
-│  cards (1 col) …      │
-└───────────────────────┘
-tap ☰ → nav list drops down
-```
+![Home page — mobile layout](images/wf-home-mobile.png)
 
 ### Projects (desktop)
 
-```
-┌───────────────────────────────────────────────┐
-│  Projects                                       │
-│  intro line                                     │
-├───────────────────────────────────────────────┤
-│  ┌───────────┐  ┌───────────┐                   │
-│  │  cover    │  │  cover    │                    │
-│  │  title    │  │  title    │   grid, auto-fill  │
-│  │  result   │  │  result   │                    │
-│  │  tags     │  │  tags     │                    │
-│  │  Code · … │  │  Code · … │                    │
-│  └───────────┘  └───────────┘                   │
-└───────────────────────────────────────────────┘
-```
-
-> For submission, export these as image mockups (Figma / Excalidraw) and place
-> them in `images/` if your rubric wants visual mockups; the ASCII wireframes
-> above document the intended layout and responsive behaviour.
+![Projects page — desktop layout](images/wf-projects.png)
 
 ---
 
