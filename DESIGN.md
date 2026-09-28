@@ -1,6 +1,4 @@
-# Trupal Jageshkumar Patel's Personal Homepage
-
-**Design Document**
+# Design-Document : Trupal Jageshkumar's Homepage
 
 ## 1. Project description
 
