@@ -58,31 +58,41 @@ Blog article is the AI-generated page. Deployed as a public static site.
 
 ## 3. User stories
 
-1. **As Mansi (recruiter),** I want a one-sentence summary of who this person is
-   at the top of the page, so that I can decide in seconds whether to keep
-   reading. _(Home hero headline + lede.)_
-2. **As Mansi,** I want an obvious way to copy the contact email, so that I can
-   reach out without hunting. _(Copy-email button with confirmation.)_
-3. **As Margi (hiring engineer),** I want to open a projects page and read what
-   each project actually achieved, so that I can trust the work is real.
-   _(Projects page with problem/approach/result per card.)_
-4. **As Margi,** I want to jump straight to a specific project, so that I don't
-   scroll past ones I don't care about. _(Anchor links from the home cards to
-   `projects.html#id`.)_
-5. **As Janvi (peer),** I want to interact with the regression playground, so that
-   I can experience the creative component. _(Click-to-add-point canvas that
-   refits a least-squares line live.)_
-6. **As any visitor on my phone,** I want the navigation to collapse into a menu
-   I can tap, so that the site is usable on a small screen. _(Accessible mobile
-   nav toggle.)_
-7. **As a visitor who prefers a darker screen,** I want a dark theme I can switch
-   to that is remembered, so that the page is comfortable to use. _(Persisted
-   light/dark theme toggle; no ambient motion to distract.)_
-8. **As a keyboard or screen-reader user,** I want visible focus, a skip link,
-   and alt text, so that I can navigate without a mouse. _(Accessibility baseline.)_
-9. **As a power user,** I want to jump anywhere and run actions from the keyboard,
-   so that I can move through the site fast. _(⌘K / "/" command palette with
-   filtering, arrow-key selection, and Enter to run.)_
+These are the use cases, written as short stories.
+
+### Story 1: First Impression
+A recruiter finds my resume link and clicks through. She lands on my homepage
+and, within a few seconds, sees my name and that I'm a CS grad student at
+Northeastern building computer-vision and machine-learning systems; nothing else
+is competing for her attention. If she wants more, the nav bar is right there,
+and my email is one click to copy.
+
+### Story 2: Going Deeper
+A hiring engineer wants to know whether my research and projects are real, so he
+opens the Projects page. Instead of a wall of text for every project, he sees one
+line summarising each, and only expands the ones he's curious about — the Jetson
+Nano detection work published at ICT4SD, the IoT waste-bin monitor, or the
+satellite image processing I did at ISRO — each linking to its paper. The longer
+write-ups live on their own page, so Home stays short for people who don't want
+them.
+
+### Story 3: Trying It Out
+A fellow student is curious about the creative part of the site. On Home he
+clicks the regression plot to drop points and watches the best-fit line update
+live, then drags a satellite into orbit in the little gravity sandbox. Because
+he's a keyboard person, he presses ⌘K and moves around the site without
+touching the mouse — and a small hint tells him the shortcut is there, so he
+isn't expected to guess it.
+
+### Story 4: Reaching Out
+Someone lands on the site just wanting my email and GitHub, and finds them
+without hunting — a copy-email button and clear links. Because it's a static
+site, the half-minute they give it is spent reading, not watching a spinner.
+
+### Story 5: For Everyone
+A screen-reader user can use the whole site, because every image is described and
+every control is a real button or link. Someone who prefers a darker screen or
+less motion gets a dark theme and reduced-motion support that the site remembers.
 
 ---
 
@@ -104,17 +114,21 @@ Blog article is the AI-generated page. Deployed as a public static site.
 
 ## 5. Design mockups (wireframes)
 
-### Home (desktop)
+I sketched each page by hand to work out the layout — what goes where, how the
+navigation connects the pages, and roughly what I'll place in each section. These
+are my original hand-drawn wireframes.
 
-![Home page — desktop layout](images/wf-home-desktop.png)
+### User flow
+![User flow through the site](images/wireframe-flow.png)
 
-### Home (mobile)
+### Page layouts (desktop)
+![Desktop page layouts — Home, Projects, About, Blog](images/wireframe-desktop.png)
 
-![Home page — mobile layout](images/wf-home-mobile.png)
+### Site map — page connections
+![Site map — how the pages connect](images/wireframe-sitemap.png)
 
-### Projects (desktop)
-
-![Projects page — desktop layout](images/wf-projects.png)
+### Mobile layout
+![Mobile layout — home page and open menu](images/wireframe-mobile.png)
 
 ---
 
