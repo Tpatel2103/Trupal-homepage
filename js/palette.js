@@ -194,6 +194,10 @@ export function initPalette() {
       list.appendChild(li);
     });
     input.setAttribute("aria-activedescendant", `palette-item-${active}`);
+    const current = list.children[active];
+    if (current) {
+      current.scrollIntoView({ block: "nearest" });
+    }
   };
 
   const filter = () => {
